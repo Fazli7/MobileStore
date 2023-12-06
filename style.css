@@ -18,7 +18,7 @@ header{
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
-    background-image: linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url(Background.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9)),url(Background.jpg);
     
     border: 0px solid;
     width: 100%;
@@ -36,6 +36,7 @@ header{
 .logo{
     cursor: pointer;
     width: 4cm;
+    margin-left: -30px;
     
     
 }
@@ -83,9 +84,25 @@ nav ul li:hover::after{
     width: 100%;
 
 }
+button{
+    padding: 9px 25px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    display: flex;
+    margin-right: 10px;
+}
+.text{
+    margin-top: 250px;
+    text-align: center;
+    font-family: sans-serif;
+    color: white;
+}
 .image-row{
     height: 300px;
-    margin-top: 250px;
+    margin-top: 150px;
     margin-left: 50px;
     margin-right: 50px;
     display: flex;
