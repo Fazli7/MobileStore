@@ -83,6 +83,44 @@ nav ul li:hover::after{
     width: 100%;
 
 }
-.container{
+.image-row{
+    height: 300px;
     margin-top: 250px;
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
+    justify-content: space-between;
+    
+    
+    
 }
+.wapper{
+    display: flex;
+    justify-content: space-between;
+    width: 65vmax;
+    height: 30vmax;
+    border: 1px solid black;
+}
+.box{
+    flex: 0 0 40%;
+    height: 100%;
+    text-align: center;
+    border: 1px solid black;
+    background-color: antiquewhite;
+    border-radius: 25px;
+    border-style: groove;
+    
+
+    
+    
+}
+.box1{
+    flex: 0 10% 60%;
+    height: 100%;
+    text-align: center;
+    border: 1px solid black;
+    background-color: antiquewhite;
+    border-radius: 25px;
+    border-style: groove;
+}
+    
