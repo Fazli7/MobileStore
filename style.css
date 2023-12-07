@@ -163,3 +163,40 @@ button{
     margin-top: 150px;
     color: #fff;
 }
+
+
+form {
+    
+    width: 300px;
+    margin: 0 auto;
+}
+
+label {
+    vertical-align: middle;
+    display: block;
+    margin-bottom: 1px;
+    margin-top: 3px;
+    color: #fff ;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+button[type="submit"] {
+    padding: 9px 25px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    display: flex;
+    margin-right: 10px;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
