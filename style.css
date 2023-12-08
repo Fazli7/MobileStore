@@ -135,6 +135,7 @@ button{
     padding-bottom: 10px;
 }
 .contact{
+    padding-top: 40px;
     margin-top: 150px;
     display: inline-block;
     margin-left: 34%;
@@ -172,7 +173,8 @@ form {
 }
 
 label {
-    vertical-align: middle;
+    
+    
     display: block;
     margin-bottom: 1px;
     margin-top: 3px;
@@ -186,17 +188,25 @@ input[type="text"], textarea {
     border-radius: 10px;
 }
 
-button[type="submit"] {
+
+
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+input[type="password"], textarea {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+input[type=submit] {
     padding: 9px 25px;
     background-color: rgba(0, 136, 169, 1);
     border: none;
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
-    display: flex;
+    
     margin-right: 10px;
-}
-
-button[type="submit"]:hover {
-    background-color: #0056b3;
 }
