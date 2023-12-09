@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MOBILESTORE</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        
         <img class="logo" src="logo.png" alt="logo">
         <nav>
             <ul class="nav-links">
@@ -17,35 +16,33 @@
                 <li><a href="watches.html"><button1 onclick="window.history.go">Watches</button1></a></li>
                 <li><a href="accessories.html"><button1 onclick="window.history.go">Accessories</button1></a></li>
                 <li><a href="contact.html"><button1 onclick="window.history.go">Contact Us</button1></a></li>
-                <li><a class="signin" href="login.html"><button><b>Sign in</b></button></a>
+                <li><a class="signin" href="signin.html"><button><b>Sign in</b></button></a>
             </ul>
            
         </nav>
-
+       
     </header>
-
+    <div class="all">
+        <div class="container">
+            <form action="" name="Formfill" onsubmit="return validation()">
+                <h2>Log In</h2>
+                <p id="result"></p>
+                
+                <div class="input-box">
+                    <input type="email" name="Email" placeholder="Email">
+                </div>
+                <div class="input-box">
+                    <input type="password" name="Password" placeholder="Password">
+                </div>
+                
+                <div class="button"><input type="submit" class="button" onclick="validation()" value="Login"></div>
+                <div class="group">
+                    
+                </div>
+            </form>
+        </div>
+    </div>
 
     
-</head>
-<body>
-
-<h2>Registration Form</h2>
-
-<div class="contact"><form action="/submit_registration" method="post">
-    <label for="fname">First Name:</label><br>
-    <input type="text" id="fname" name="fname"><br>
-    <label for="lname">Last Name:</label><br>
-    <input type="text" id="lname" name="lname"><br>
-    <label for="email">Email:</label><br>
-    <input type="text" id="email" name="email"><br>
-    <label for="password">Password:</label><br>
-    <input type="password" id="password" name="password"><br>
-    <label for="cpassword">Confirm Password:</label><br>
-    <input type="password" id="cpassword" name="cpassword"><br>
-    
-    <input type="submit" value="Submit">
-</div></form>
-
-<script src="/login.js"></script>
 </body>
 </html>
