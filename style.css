@@ -228,31 +228,7 @@ button{
     position: relative;
     font-weight: 600;
     top: 25px;
-}
-.popup{
-    width: 270px;
-    margin-top: 20px;
-    
-    background-color: white;
-    border-radius: 10px;
-    position: absolute;
-    
-    transition: transform .4s , top .4s;
-    visibility: hidden;
-    text-align: center;
-    padding: 30px 30px 30px;
-    height: 330px;
-    color: black;
-    font-size: 20px;
-}.popup button{
-    margin-top: 100px;
-    width: 100%;
-    justify-content: center;
-    
-}open-slide{
-    top: 50%;
-    transform: translate(-50%,-50%) scale(1);
-    visibility: visible;
+    font-size: 13px;
 }
 
 
