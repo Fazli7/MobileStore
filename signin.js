@@ -42,6 +42,6 @@ function validation() {
     }
 
     // If all validation passes
-    resultMessage.innerHTML = '';
+    resultMessage.innerHTML = 'Registration Successful';
     return true;
 }
