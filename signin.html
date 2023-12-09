@@ -37,30 +37,26 @@
             <h2>Register</h2>
             <p id="result"></p>
             <div class="input-box">
-                <input type="text" name="Username" placeholder="Username">
+                <input type="text" name="Username" id="username" placeholder="Username">
             </div>
             <div class="input-box">
-                <input type="email" name="Email" placeholder="Email">
+                <input type="email" name="Email" id="email" placeholder="Email">
             </div>
             <div class="input-box">
-                <input type="password" name="Password" placeholder="Password">
+                <input type="password" name="Password" id="password" placeholder="Password">
             </div>
             <div class="input-box">
-                <input type="password" name="cPassword" placeholder="Confirm Password">
+                <input type="password" name="cPassword" id="confirmPassword" placeholder="Confirm Password">
             </div>
-            <div class="button"><input type="submit" class="button" onclick="validation()" value="Register"></div>
+            <div class="button">
+                <input type="submit" class="button" value="Register">
+            </div>
             <div class="group">
-                <span><a href="#">Login</a></span>
+                <span><a href="login.html">Login</a></span>
             </div>
         </form>
     </div>
-    <div class="popup" id="popup">
-        <br>
-        <h2>Thank you</h2>
-        <br>
-        <p>You were Registered Successfully</p>
-        <a href="login.html"><button onclick="CloseSlide">Ok</button></a>
-    </div>
+    
 </div>
 
 <script src="/signin.js"></script>
