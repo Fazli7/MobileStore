@@ -1,41 +1,47 @@
-function validation(){
-    if(document.Formfill.Username.value==""){
-        document.getElementById("result").innerHTML="Enter Username*";
-        return false;
-    }
-    else if(document.Formfill.Username.value.length<6){
-        document.getElementById("result").innerHTML="Atleast six letters*";
-        return false;
-    }
-    else if(document.Formfill.Email.value==""){
-        document.getElementById("result").innerHTML="Enter your Email*";
-        return false;
-    }
-    else if(document.Formfill.Password.value==""){
-        document.getElementById("result").innerHTML="Enter your Password*";
-        return false;
-    }
-    else if(document.Formfill.Password.value.length<6){
-        document.getElementById("result").innerHTML="Password must be 6-digits*";
-        return false;
-    }
-    else if(document.Formfill.cPassword.value==""){
-        document.getElementById("result").innerHTML="Enter Confirm Password*";
-        return false;
-    }
-    else if(document.Formfill.cPassword.value !== document.Formfill.Password.value){
-        document.getElementById("result").innerHTML="Password doesn't match*";
-        return false;
-    }
-    else if(document.Formfill.cPassword.value == document.Formfill.Password.value){
-        popup.classList.add("open-slide")
+function validation() {
+    var username = document.getElementById('username').value;
+    var email = document.getElementById('email').value;
+    var password = document.getElementById('password').value;
+    var confirmPassword = document.getElementById('confirmPassword').value;
+
+    var resultMessage = document.getElementById('result');
+
+    // Check if any field is empty
+    if (username === '' || email === '' || password === '' || confirmPassword === '') {
+        resultMessage.innerHTML = 'Please fill in all fields.';
         return false;
     }
 
+    // Check if passwords match
+    if (password !== confirmPassword) {
+        resultMessage.innerHTML = 'Passwords do not match.';
+        return false;
+    }
 
+    // Regular expression patterns for validation
+    var usernamePattern = /^[a-zA-Z0-9_-]{3,16}$/;
+    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    var passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
 
-}
-var popup=document.getElementById('popup');
-function CloseSlide(){
-    popup.classList.remove("open-slide")
+    // Validate username
+    if (!usernamePattern.test(username)) {
+        resultMessage.innerHTML = 'Invalid username format.';
+        return false;
+    }
+
+    // Validate email
+    if (!emailPattern.test(email)) {
+        resultMessage.innerHTML = 'Invalid email format.';
+        return false;
+    }
+
+    // Validate password
+    if (!passwordPattern.test(password)) {
+        resultMessage.innerHTML = 'Password must be at least 8 characters long and contain at least one letter and one number.';
+        return false;
+    }
+
+    // If all validation passes
+    resultMessage.innerHTML = '';
+    return true;
 }
