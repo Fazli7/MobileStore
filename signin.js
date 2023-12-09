@@ -28,7 +28,7 @@ function validation(){
         return false;
     }
     else if(document.Formfill.cPassword.value == document.Formfill.Password.value){
-        popup.classList.add(".open-slide")
+        popup.classList.add("open-slide")
         return false;
     }
 
