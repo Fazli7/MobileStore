@@ -4,7 +4,7 @@ function validateForm() {
     var subject = document.getElementById('subject').value;
     var message = document.getElementById('message').value;
 
-    var errorMessage = document.createElement('div');
+    var errorMessage = document.createElement('result');
     errorMessage.className = 'error-message';
 
     // Check if any field is empty
@@ -25,6 +25,6 @@ function validateForm() {
     }
 
     // If all validation passes
-    errorMessage.innerHTML = ''; // Clear any previous error messages
+    errorMessage.innerHTML = 'Successful'; // Clear any previous error messages
     return true;
 }
