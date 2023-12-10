@@ -1,30 +1,60 @@
+document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('contactForm').addEventListener('submit', function (event) {
+        event.preventDefault(); 
+        var isValid = validateForm();
+
+        if (isValid) {
+            displaySuccessMessage();
+        }
+    });
+});
+
 function validateForm() {
     var name = document.getElementById('name').value;
     var email = document.getElementById('email').value;
     var subject = document.getElementById('subject').value;
     var message = document.getElementById('message').value;
 
-    var errorMessage = document.createElement('result');
+    var errorMessage = document.createElement('div');
     errorMessage.className = 'error-message';
 
-    // Check if any field is empty
     if (name === '' || email === '' || subject === '' || message === '') {
         errorMessage.innerHTML = 'Please fill in all fields.';
-        document.querySelector('form').appendChild(errorMessage);
+        document.querySelector('.container').appendChild(errorMessage);
         return false;
     }
 
-    // Regular expression pattern for email validation
     var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    // Validate email
     if (!emailPattern.test(email)) {
         errorMessage.innerHTML = 'Invalid email format.';
-        document.querySelector('form').appendChild(errorMessage);
+        document.querySelector('.container').appendChild(errorMessage);
         return false;
     }
 
-    // If all validation passes
-    errorMessage.innerHTML = 'Successful'; // Clear any previous error messages
+    errorMessage.innerHTML = '';
     return true;
 }
+
+function displaySuccessMessage() {
+    var form = document.getElementById('contactForm');
+    form.style.display = 'none';
+
+    // Create and append the success message
+    var successMessage = document.createElement('div');
+    successMessage.className = 'success-message';
+    successMessage.innerHTML = 'Message sent successfully!';
+    document.querySelector('.container').appendChild(successMessage);
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    var form = document.querySelector('form');
+    if (form) {
+        form.addEventListener('submit', function (event) {
+            alert('Message sent successfully!');
+
+            event.preventDefault();
+        });
+    }
+});
+
