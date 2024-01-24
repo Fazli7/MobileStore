@@ -24,7 +24,7 @@
     </header>
     <div class="all">
         <div class="container">
-            <form action="" name="Formfill" onsubmit="return validation()">
+            <form action="login_process.php" name="Formfill" onsubmit="return validation()" method="post">
                 <h2>Log In</h2>
                 <p id="result"></p>
                 
