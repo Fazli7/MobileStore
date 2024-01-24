@@ -40,7 +40,7 @@ function validation() {
 
 
     setTimeout(function () {
-        window.location.href = 'login.html';
+        window.location.href = 'login.php';
     }, 2000);
 
     return false; }
