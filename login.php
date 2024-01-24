@@ -29,10 +29,10 @@
                 <p id="result"></p>
                 
                 <div class="input-box">
-                    <input type="email" name="Email" placeholder="Email">
+                    <input type="text" name="username" id="username" placeholder="Email" >
                 </div>
                 <div class="input-box">
-                    <input type="password" name="Password" placeholder="Password">
+                    <input type="password" name="password" id="password" placeholder="Password">
                 </div>
                 
                 <div class="button"><input type="submit" class="button" onclick="validation()" value="Login"></div>
