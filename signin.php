@@ -33,7 +33,7 @@
 
 <div class="all">
     <div class="container">
-        <form action="" name="Formfill" onsubmit="return validation()">
+        <form action="register_process.php" name="Formfill" onsubmit="return validation()" method="post">
             <h2>Register</h2>
             <p id="result"></p>
             <div class="input-box">
@@ -50,6 +50,13 @@
             </div>
             <div class="button">
                 <input type="submit" class="button" value="Register">
+            </div>
+            <div class="role">
+            <select name="role" id="role" required>
+            <option value="admin">Admin</option>
+            <option value="user">User</option>
+            </select><br>
+
             </div>
             <div class="group">
                 <span><a href="login.php">Login</a></span>
