@@ -2,12 +2,18 @@
 require_once 'config.php';
 
 $username = $_POST['username'];
+$email = $_POST['email'];
 $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-$role = $_POST['role'];
+$confirm_password = $_POST['confirm_password'];
 
-$sql = "INSERT INTO users (username, password, role) VALUES (?, ?, ?)";
+if ($password != $confirm_password) {
+    echo "Passwords do not match";
+    exit;
+}
+
+$sql = "INSERT INTO users (username, email, password) VALUES (?, ?, ?)";
 $stmt = $conn->prepare($sql);
-$stmt->bind_param("sss", $username, $password, $role);
+$stmt->bind_param("sss", $username, $email, $password);
 $stmt->execute();
 
 header("Location: login.php");
