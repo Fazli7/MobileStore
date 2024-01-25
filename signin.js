@@ -39,6 +39,8 @@ function validation() {
     resultMessage.innerHTML = 'Successfully registered.';
 
 
-    
+    setTimeout(function () {
+        window.location.href = 'login.php';
+    }, 2000);
 
     return false; }
