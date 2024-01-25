@@ -1,25 +1,35 @@
 <?php
 session_start();
-require_once 'config.php';
+require 'config.php';
 
-$username = $_POST['username'];
-$password = $_POST['password'];
+if (isset($_POST['login'])) {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
 
-$sql = "SELECT * FROM users WHERE username = ?";
-$stmt = $conn->prepare($sql);
-$stmt->bind_param("s", $username);
-$stmt->execute();
-$result = $stmt->get_result();
-
-if ($result->num_rows > 0) {
-    $user = $result->fetch_assoc();
-    if (password_verify($password, $user['password'])) {
-        $_SESSION['username'] = $user['username'];
-        $_SESSION['role'] = $user['role'];
-        header("Location: dashboard.php");
+    if (empty($email) || empty($password)) {
+        $_SESSION['error'] = "All fields are required!";
+        header('location: login.php');
     } else {
-        echo "Invalid password";
+        $sql = "SELECT * FROM users WHERE email = ?";
+        $stmt = $conn->prepare($sql);
+
+        if (!$stmt) {
+            $_SESSION['error'] = "SQL error!";
+            header('location: login.php');
+        } else {
+            $stmt->bind_param('s', $email);
+            $stmt->execute();
+            $result = $stmt->get_result();
+            $user = $result->fetch_assoc();
+
+            if ($user && password_verify($password, $user['password'])) {
+                $_SESSION['user'] = $user;
+                header('location: dashboard.php');
+            } else {
+                $_SESSION['error'] = "Invalid email or password!";
+                header('location: login.php');
+            }
+        }
     }
-} else {
-    echo "User not found";
 }
+?>
