@@ -32,7 +32,11 @@
 <h2>Registration Form</h2>
 
 <div class="all">
-    <div class="container">
+    <div class="container"> 
+        <?php if (isset($_SESSION['error'])): ?>
+        <p><?php echo $_SESSION['error']; ?></p>
+        <?php unset($_SESSION['error']); ?>
+    <?php endif; ?>
         <form action="register_process.php" name="Formfill" onsubmit="return validation()" method="post">
             <h2>Register</h2>
             <p id="result"></p>
@@ -50,16 +54,20 @@
             </div>
             <div class="button">
                 <input type="submit" class="button" value="Register">
-            </div>
-            <div class="role">
+            </div >
+            <div class="input-box">
+            
+            
+            
+            
             <select name="role" id="role" required>
             <option value="admin">Admin</option>
             <option value="user">User</option>
-            </select><br>
+            </select>
 
             </div>
             <div class="group">
-                <span><a href="login.php">Login</a></span>
+                <br><span><a href="login.php">Login</a></span>
             </div>
         </form>
     </div>
