@@ -24,6 +24,10 @@
     </header>
     <div class="all">
         <div class="container">
+        <?php if (isset($_SESSION['error'])): ?>
+        <p><?php echo $_SESSION['error']; ?></p>
+        <?php unset($_SESSION['error']); ?>
+    <?php endif; ?>
             <form action="login_process.php" name="Formfill" onsubmit="return validation()" method="post">
                 <h2>Log In</h2>
                 <p id="result"></p>
