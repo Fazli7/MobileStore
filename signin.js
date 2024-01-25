@@ -32,15 +32,13 @@ function validation() {
     }
 
     if (!passwordPattern.test(password)) {
-        resultMessage.innerHTML = 'Password must be at least 8 characters long.';
+        resultMessage.innerHTML = 'Password must be at least 8 characters long. and contain at least one letter and one number';
         return false;
     }
 
-    resultMessage.innerHTML = 'Successfully registered. Redirecting to login page...';
+    resultMessage.innerHTML = 'Successfully registered.';
 
 
-    setTimeout(function () {
-        window.location.href = 'login.php';
-    }, 2000);
+    
 
     return false; }
