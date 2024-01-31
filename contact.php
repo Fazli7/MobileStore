@@ -11,11 +11,11 @@
         <img class="logo" src="logo.png" alt="logo">
         <nav>
             <ul class="nav-links">
-                <li><a href="mobilestore.php"><button1 onclick="window.history.go">Store</button1></a></li>
+                <li><a href="index.php"><button1 onclick="window.history.go">Store</button1></a></li>
                 <li><a href="phones.php"><button1 onclick="window.history.go">Phones</button1></a></li>
                 <li><a href="watches.php"><button1 onclick="window.history.go">Watches</button1></a></li>
                 <li><a href="accessories.php"><button1 onclick="window.history.go">Accessories</button1></a></li>
-                <li><a href="contact.php"><button1 onclick="window.history.go">Contact Us</button1></a></li>
+                <li><a href="./Contactus/index.php"><button1 onclick="window.history.go">Contact Us</button1></a></li>
                 <li><a class="signin" href="signin.php"><button><b>Sign in</b></button></a>
             </ul>
            

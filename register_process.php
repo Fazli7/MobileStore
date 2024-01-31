@@ -33,7 +33,7 @@ if (empty($username) || empty($email) || empty($password) || empty($confirm_pass
         $_SESSION['role'] = $role;
 
         $_SESSION['success'] = "Registration successful!";
-        header('location: mobilestore.php');
+        header('location: index.php');
     }
 }
 

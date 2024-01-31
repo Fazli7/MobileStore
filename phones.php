@@ -8,14 +8,14 @@
 </head>
 <body>
     <header>
-        <img class="logo" src="logo.png" alt="logo">
+    <img class="logo" src="./photos/logo.png" alt="logo">
         <nav>
             <ul class="nav-links">
-                <li><a href="mobilestore.php"><button1 onclick="window.history.go">Store</button1></a></li>
+                <li><a href="index.php"><button1 onclick="window.history.go">Store</button1></a></li>
                 <li><a href="phones.php"><button1 onclick="window.history.go">Phones</button1></a></li>
                 <li><a href="watches.php"><button1 onclick="window.history.go">Watches</button1></a></li>
                 <li><a href="accessories.php"><button1 onclick="window.history.go">Accessories</button1></a></li>
-                <li><a href="contact.php"><button1 onclick="window.history.go">Contact Us</button1></a></li>
+                <li><a href="./Contactus/index.php"><button1 onclick="window.history.go">Contact Us</button1></a></li>
                 <li><a class="signin" href="signin.php"><button><b>Sign in</b></button></a>
             </ul>
            
@@ -25,21 +25,32 @@
         <h1 class="text"><b>Phones</b></h1>
 
         
-    <div class="image-row">
-        <div class="img">
-            <img src="apple1.png" alt="iphone">
-        </div>
-        <div class="title">
-            <h2>Iphone 15 Pro Max</h2>
+        <?php
+                require_once('./admin/db.php');
+                $result = $conn->prepare("SELECT * FROM gallery ORDER BY tbl_image_id ASC");
+                $result->execute();
+                for ($i = 0; $row = $result->fetch(); $i++) {
+                    $id = $row['tbl_image_id'];
+                ?>
+                  
 
-        </div>
-        <div class="price">
-            <h3>1299€</h3>
+            <div class="image-row">
+            <div class="img">
+                <img src="./photos/<?php echo $row['image_location']; ?>" alt="<?php echo $row['Photos_name']; ?>">
+            </div>
+                <div class="title">
+                    <h2><?php echo $row['Photos_name']; ?></h2>
 
-        </div>
-    </div>
+                </div>
+                <div class="price">
+                    <h3><?php echo $row['price']; ?>€</h3>
 
-    <div class="image-row">
+                </div>
+            </div>
+
+
+                <?php } ?>
+    <!-- <div class="image-row">
         <div class="img">
             <img src="iphone12pro.png" alt="iphone">
         </div>
@@ -124,19 +135,7 @@
         </div>
     </div>
 
-    <div class="image-row">
-        <div class="img">
-            <img src="note20ultra.png" alt="iphone">
-        </div>
-        <div class="title">
-            <h2>Samsung Note 20 Ultra</h2>
-
-        </div>
-        <div class="price">
-            <h3>670€</h3>
-
-        </div>
-    </div>
+    
 
         
       

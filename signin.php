@@ -9,10 +9,10 @@
 <body>
 <header>
 
-    <img class="logo" src="logo.png" alt="logo">
+    <img class="logo" src="./photos/logo.png" alt="logo">
     <nav>
         <ul class="nav-links">
-            <li><a href="mobilestore.php">
+            <li><a href="index.php">
                     <button1 onclick="window.history.go">Store</button1>
                 </a></li>
             <li><a href="phones.php">
@@ -24,7 +24,7 @@
             <li><a href="accessories.php">
                     <button1 onclick="window.history.go">Accessories</button1>
                 </a></li>
-            <li><a href="contact.php">
+            <li><a href="./Contactus/index.php">
                     <button1 onclick="window.history.go">Contact Us</button1>
                 </a></li>
             <li><a class="signin" href="signin.php">
@@ -64,12 +64,7 @@
                 <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password">
             </div>
 
-            <div class="input-box">
-                <select name="role" id="role" required>
-                    <option value="admin">Admin</option>
-                    <option value="user">User</option>
-                </select>
-            </div>
+            
 
             <div class="button">
                 <input type="submit" class="button" value="Register">
