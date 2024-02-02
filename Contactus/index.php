@@ -2,10 +2,10 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" /> -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700|Roboto:400,400i,700,700i" />
+    
+    
     <link rel="stylesheet" href="../styles/style.css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    
     <script src="validations.js"></script>
 </head>
 
@@ -19,7 +19,7 @@
                 <li><a href="../watches.php"><button1 onclick="window.history.go">Watches</button1></a></li>
                 <li><a href="../accessories.php"><button1 onclick="window.history.go">Accessories</button1></a></li>
                 <li><a href="index.php"><button1>Contact Us</button1></a></li>
-                <li><a class="signin" href="signin.php"><button><b>Sign in</b></button></a>
+                <li><a class="signin" href="../signin.php"><button><b>Sign in</b></button></a>
             </ul>
            
         </nav>
